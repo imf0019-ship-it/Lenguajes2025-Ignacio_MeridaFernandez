@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Antonio Barbado Rodriguez, Nacho Mérida Fernandez y Antonio Castaño Barril">
+    <title>El Rincón Dulce - Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        
+        <h1>🍬 El Rincón Dulce 🍭</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Sobre Nuestro Proyecto</a>
+            <a href="./tablacalorica.html">Informacion Adicional</a>
+            <a href="./formulario.html">Formulario</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="iframe.html">Contenido Audiovisual</a>
+            
+        </nav>
+    </header>
+
+    <section class=" formulario">
+
+        <h2>Contáctanos</h2>
+        
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 10px auto; width: 50%;">
+
+        <nav>
+            <form action="#" method="POST" class="form-chuches">
+        <label for="nombre" class="formulario-label"><b>Nombre:</b></label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre." required> <br><br>
+
+        <label for="telefono" class="formulario-label"><b>Teléfono:</b></label><br>
+        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de contacto."><br><br>
+
+        <label for="email" class="formulario-label"><b>Correo Electrónico:</b></label><br>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico." required><br><br>
+
+        <label for="motivo" class="formulario-label"><b>Motivo de tu mensaje:</b></label><br>
+        <select id="motivo" name="motivo">
+            <option value="">Selecciona una opción</option>
+            <option value="pedido">Consulta sobre una chuche</option>
+            <option value="precios">Consultas de precios</option>
+            <option value="proveedores">Proveedores de chuches</option>
+            <option value="evento">Chuches para eventos</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+
+        <label for="mensaje" class="formulario-label"><b>Mensaje:</b></label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea><br><br>
+
+        <input type="checkbox" id="terminos" name="terminos">
+        <label for="terminos" class="formulario-label"><b>Acepto la política de privacidad</b></label><br><br>
+
+        <button type="submit" class="formulario-button formulario-label" >Enviar</button>
+        </nav>
+        
+    </section>
+
+</body>
+</html>

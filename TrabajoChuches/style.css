@@ -1,0 +1,396 @@
+/* ======================================================= */
+/* 1. Base y Tipografía (body, h1, h2, h3) */
+/* ======================================================= */
+
+body {
+    font-family: 'Arial', sans-serif;
+
+    
+    background-image: url('./img/fondo.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+
+    color: #333333;
+    margin: 0;
+    line-height: 1.6;
+    
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    /* REVERTIDO: Se aplica Arial Black a todos por defecto */
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: #ff00b3;
+}
+
+/* ======================================================= */
+/* 2. Encabezado y Navegación (header, nav) */
+/* ======================================================= */
+
+header {
+    background-color: #FFC0CB;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+header h1 {
+    /* ESTILO CHUCHES MANTENIDO: Título principal */
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5em; 
+    color: #FF69B4;
+    text-shadow: 
+        3px 3px 0 #FFFFFF, 
+        6px 6px 0 #000000;
+    margin: 0 0 10px 0;
+}
+
+nav {
+    text-align: center;
+    padding-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #8B008B;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    color: #FF00FF;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ======================================================= */
+/* 3. Contenido Principal (main) y Hero Section */
+/* ======================================================= */
+
+main {
+    padding: 40px 20px;
+    max-width: 750px; 
+    margin: 40px auto; 
+    flex-grow: 1;
+}
+
+.hero {
+    background-color: #FF69B4;
+    color: white;
+    text-align: center;
+    padding: 1% 20px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    font-size: 3em; 
+    text-shadow: 
+        2px 2px 0 #ff00b3, 
+        4px 4px 0 #DC143C; 
+    margin-bottom: 0.2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #ff00b3;
+    color: #333333;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* ======================================================= */
+/* 4. Estilos de Catálogo (Grid y Productos) */
+/* ======================================================= */
+
+.catalogo-completo h2, .catalogo h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.5em;
+    color: #ff42aa;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    padding: 0; 
+}
+
+.producto, .seccion-tematica, .seccion-organizacion {
+   background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px #ff00b3;
+}
+
+.producto img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 5px;
+}
+
+.producto h3 {
+    font-family: 'Arial Black', sans-serif;
+    color: #8B008B;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+.producto p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+    min-height: 40px;
+    flex-grow: 1;
+}
+
+.etiqueta-precio {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #DC143C;
+    margin-top: 15px;
+}
+
+/* ======================================================= */
+/* 5. Diseño de la Página Explicativa (Nosotros) y Tabla de Calorías */
+/* ======================================================= */
+
+
+.seccion-organizacion {
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+.explicacion h3 {
+    
+    color: #ff00b3;
+    border-bottom: 2px dashed #40E0D0;
+    padding-bottom: 5px;
+}
+
+.explicacion ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.explicacion li {
+    background-color: #f7f3e8;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    font-size: 1.1em; 
+    table-layout: fixed; 
+}
+
+thead tr {
+    background-color: #c5c5c2; 
+    color: #333333;
+}
+
+
+th, td {
+    padding: 25px 15px; 
+    border: 1px solid #ccc;
+    text-align: center;
+    word-wrap: break-word; 
+}
+
+
+th {
+    text-align: left;
+}
+td:first-child {
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+mark {
+  
+  background-color: #ff77b0; 
+  
+  
+  color: #333333; 
+  
+  
+  text-shadow: none; 
+}
+
+
+/* ======================================================= */
+/* 6. Pie de Página (Footer) */
+/* ======================================================= */
+
+footer {
+    background-color: #ff6bc6; 
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+/* ======================================================= */
+/* 7. Diseño de la Página (Formulario) */
+/* ======================================================= */
+
+.formulario{
+    background-color: #FFFACD;
+    height: auto;
+    width: 550px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e7e4ce;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.formulario h2 {
+    color: #ff00b3;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.formulario nav{
+    text-align: center;
+}
+
+.formulario:hover {
+    box-shadow: 0 10px 20px #fc00b0;
+}
+
+.formulario-button {
+    display: inline-block;
+    background-color: #ff2fa1;
+    color: #333333;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.formulario-label{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.caja-historia {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.caja-historia h3 {
+    color: #d4419a;
+}
+
+.caja-aside {
+    background: rgba(255, 255, 240, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-top: 25px;
+}
+
+.caja-timeline {
+    background: rgba(255, 240, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-top: 30px;
+}
+
+.galeria {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.galeria h2 {
+    color: #d4419a;
+    margin-bottom: 20px;
+}
+
+.item-galeria {
+    display: inline-block;
+    margin: 15px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    border-radius: 12px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.item-galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item-galeria p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #d4419a;
+    font-weight: bold;
+}
